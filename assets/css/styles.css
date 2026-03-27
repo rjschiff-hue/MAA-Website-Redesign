@@ -1,30 +1,30 @@
 /* ============================================
    Multifamily Asset Advisors - Main Stylesheet
-   Bold & Modern | Dark Navy + Electric Blue
+   Clean & Minimal | White + Blue
    ============================================ */
 
 /* ---------- CSS Variables ---------- */
 :root {
-  --navy-dark: #060F1E;
-  --navy: #0A1628;
-  --navy-mid: #122040;
-  --navy-light: #1A2F58;
+  --navy-dark: #FFFFFF;
+  --navy: #F8FAFC;
+  --navy-mid: #F1F5F9;
+  --navy-light: #E2E8F0;
   --blue: #2563EB;
   --blue-bright: #3B82F6;
-  --blue-glow: rgba(37, 99, 235, 0.25);
+  --blue-glow: rgba(37, 99, 235, 0.15);
   --gold: #F59E0B;
   --gold-light: #FCD34D;
-  --white: #FFFFFF;
-  --off-white: #F1F5F9;
-  --gray-200: #E2E8F0;
-  --gray-400: #94A3B8;
-  --gray-600: #475569;
+  --white: #0F172A;
+  --off-white: #1E293B;
+  --gray-200: #334155;
+  --gray-400: #64748B;
+  --gray-600: #94A3B8;
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-display: 'Playfair Display', 'Georgia', serif;
   --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --radius: 12px;
-  --shadow-md: 0 4px 24px rgba(0,0,0,0.3);
-  --shadow-lg: 0 8px 40px rgba(0,0,0,0.4);
+  --shadow-md: 0 4px 24px rgba(0,0,0,0.08);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.12);
 }
 
 /* ---------- Reset & Base ---------- */
@@ -132,7 +132,7 @@ p { color: var(--gray-400); font-size: 1rem; }
 .btn-outline {
   background: transparent;
   color: var(--white);
-  border: 1.5px solid rgba(255,255,255,0.25);
+  border: 1.5px solid rgba(0,0,0,0.2);
 }
 
 .btn-outline:hover {
@@ -164,11 +164,11 @@ p { color: var(--gray-400); font-size: 1rem; }
 }
 
 .nav.scrolled {
-  background: rgba(6, 15, 30, 0.95);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   padding: 14px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
 }
 
 .nav-inner {
@@ -213,6 +213,9 @@ p { color: var(--gray-400); font-size: 1rem; }
   transition: var(--transition);
   position: relative;
 }
+
+.nav-logo-main { color: var(--white) !important; }
+.nav-hamburger span { background: var(--white) !important; }
 
 .nav-links a::after {
   content: '';
@@ -261,7 +264,7 @@ p { color: var(--gray-400); font-size: 1rem; }
   position: fixed;
   inset: 0;
   z-index: 99;
-  background: var(--navy-dark);
+  background: #FFFFFF;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -288,6 +291,19 @@ p { color: var(--gray-400); font-size: 1rem; }
   color: var(--white);
   font-size: 2rem;
   cursor: pointer;
+}
+
+/* ---------- Hero bg overrides for light theme ---------- */
+.hero-bg {
+  background:
+    radial-gradient(ellipse 80% 60% at 60% 40%, rgba(37,99,235,0.07) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 40% at 20% 80%, rgba(37,99,235,0.04) 0%, transparent 60%) !important;
+}
+
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(37,99,235,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37,99,235,0.04) 1px, transparent 1px) !important;
 }
 
 /* ---------- Hero ---------- */
@@ -378,7 +394,7 @@ p { color: var(--gray-400); font-size: 1rem; }
   gap: 48px;
   flex-wrap: wrap;
   padding-top: 40px;
-  border-top: 1px solid rgba(255,255,255,0.08);
+  border-top: 1px solid rgba(0,0,0,0.1);
 }
 
 .hero-stat-value {
@@ -403,7 +419,7 @@ p { color: var(--gray-400); font-size: 1rem; }
 /* ---------- Cards ---------- */
 .card {
   background: var(--navy-mid);
-  border: 1px solid rgba(255,255,255,0.06);
+  border: 1px solid rgba(0,0,0,0.07);
   border-radius: var(--radius);
   padding: 36px;
   transition: var(--transition);
@@ -439,7 +455,7 @@ p { color: var(--gray-400); font-size: 1rem; }
 /* ---------- Team Cards ---------- */
 .team-card {
   background: var(--navy-mid);
-  border: 1px solid rgba(255,255,255,0.06);
+  border: 1px solid rgba(0,0,0,0.07);
   border-radius: var(--radius);
   overflow: hidden;
   transition: var(--transition);
@@ -500,8 +516,8 @@ p { color: var(--gray-400); font-size: 1rem; }
 /* ---------- Stats Bar ---------- */
 .stats-bar {
   background: var(--navy-mid);
-  border-top: 1px solid rgba(255,255,255,0.06);
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  border-top: 1px solid rgba(0,0,0,0.07);
+  border-bottom: 1px solid rgba(0,0,0,0.07);
   padding: 40px 0;
 }
 
@@ -538,13 +554,13 @@ p { color: var(--gray-400); font-size: 1rem; }
 .divider {
   width: 100%;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
+  background: linear-gradient(90deg, transparent, rgba(0,0,0,0.1), transparent);
 }
 
 /* ---------- CTA Section ---------- */
 .cta-section {
-  background: linear-gradient(135deg, var(--navy-mid) 0%, rgba(37,99,235,0.15) 100%);
-  border: 1px solid rgba(37,99,235,0.2);
+  background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+  border: 1px solid rgba(37,99,235,0.15);
   border-radius: 20px;
   padding: 72px 60px;
   text-align: center;
@@ -568,8 +584,8 @@ p { color: var(--gray-400); font-size: 1rem; }
 
 /* ---------- Footer ---------- */
 .footer {
-  background: var(--navy-dark);
-  border-top: 1px solid rgba(255,255,255,0.06);
+  background: #F8FAFC;
+  border-top: 1px solid rgba(0,0,0,0.08);
   padding: 64px 0 32px;
 }
 
@@ -624,7 +640,7 @@ p { color: var(--gray-400); font-size: 1rem; }
 
 .footer-bottom {
   padding-top: 32px;
-  border-top: 1px solid rgba(255,255,255,0.06);
+  border-top: 1px solid rgba(0,0,0,0.08);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -664,7 +680,7 @@ p { color: var(--gray-400); font-size: 1rem; }
   gap: 60px;
   align-items: center;
   padding: 60px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
 }
 
 .service-detail:last-child { border-bottom: none; }
@@ -704,7 +720,7 @@ p { color: var(--gray-400); font-size: 1rem; }
 /* ---------- Project Cards ---------- */
 .project-card {
   background: var(--navy-mid);
-  border: 1px solid rgba(255,255,255,0.06);
+  border: 1px solid rgba(0,0,0,0.07);
   border-radius: var(--radius);
   overflow: hidden;
   transition: var(--transition);
@@ -763,7 +779,7 @@ p { color: var(--gray-400); font-size: 1rem; }
   gap: 20px;
   margin-top: 16px;
   padding-top: 16px;
-  border-top: 1px solid rgba(255,255,255,0.06);
+  border-top: 1px solid rgba(0,0,0,0.08);
 }
 
 .project-meta-item {
@@ -830,7 +846,7 @@ p { color: var(--gray-400); font-size: 1rem; }
 
 .form-card {
   background: var(--navy-mid);
-  border: 1px solid rgba(255,255,255,0.06);
+  border: 1px solid rgba(0,0,0,0.07);
   border-radius: var(--radius);
   padding: 40px;
 }
@@ -854,8 +870,8 @@ p { color: var(--gray-400); font-size: 1rem; }
 .form-group textarea {
   width: 100%;
   padding: 12px 16px;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.1);
+  background: #FFFFFF;
+  border: 1px solid rgba(0,0,0,0.12);
   border-radius: 8px;
   color: var(--white);
   font-family: var(--font-sans);
