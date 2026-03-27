@@ -73,6 +73,12 @@ p { color: var(--gray-400); font-size: 1rem; }
 .section { padding: 100px 0; }
 .section-sm { padding: 60px 0; }
 
+/* Tighter spacing for About and Services pages */
+body.page-about .section,
+body.page-services .section { padding: 56px 0; }
+body.page-about .section-sm,
+body.page-services .section-sm { padding: 36px 0; }
+
 .section-label {
   display: inline-flex;
   align-items: center;
@@ -119,7 +125,7 @@ p { color: var(--gray-400); font-size: 1rem; }
 
 .btn-primary {
   background: var(--blue);
-  color: var(--white);
+  color: #FFFFFF;
   box-shadow: 0 0 24px var(--blue-glow);
 }
 
@@ -185,14 +191,14 @@ p { color: var(--gray-400); font-size: 1rem; }
 
 .nav-logo-main {
   font-family: var(--font-display);
-  font-size: 1.3rem;
+  font-size: 1.95rem;
   font-weight: 700;
   color: var(--white);
   letter-spacing: -0.01em;
 }
 
 .nav-logo-sub {
-  font-size: 0.65rem;
+  font-size: 0.975rem;
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
